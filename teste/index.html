@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card de Atendimento de Chamados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .border-gray {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .city-border {
+            border: 1px solid #ccc;
+            padding: 5px;
+            background-color: #f8f9fa;
+        }
+
+        .initial-circle {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            background-color: #ccc;
+            color: white;
+            font-weight: bold;
+        }
+
+        .me-auto {
+            border: 1px solid #ccc;
+            background-color: #f1f3f5;
+            padding: 5px;
+        }
+
+        .state-border {
+            border: 1px solid #ccc;
+            padding: 5px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .state-name {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                <div class="me-auto border-gray">
+ 
+                    <div class="state-border">
+                        <div class="initial-circle">E</div>
+                        <span class="state-name">Estado</span>
+                    </div>
+                    <span>Nome Responsável</span>
+                    <span>Número de Telefone</span>
+                </div>
+                <div>
+                    <div class="border-gray">
+                        <span>Aberto recentemente</span>
+                        <select>
+                            <option>Nome dos Técnicos</option>
+                            <!-- Adicione as opções aqui -->
+                        </select>
+                        <span>Supervisor Encarregado</span>
+                        <button class="btn btn-primary">Play</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-title">Título</h5>
+                <p class="card-text">Texto</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <div class="me-auto border-gray">
+                    <span>Data e Hora de Abertura</span>
+                    <span>Quantidade de Dias Esperando</span>
+                    <span>Número de Identificação</span>
+                </div>
+                <div class="border-gray">
+                    <span>Quantidade de Comentários Vinculados</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pzjwKm3y/OTC4j2B0knJfCd2lK8tl7zNrhAx4itjzj2XxVS8Lj7T5OrXQLaAWigq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

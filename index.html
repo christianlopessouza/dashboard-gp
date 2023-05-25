@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://superaprendiz.com.br/franquia/css/font-awesome/css/all.min.css">
+
+    <link href="https://fonts.cdnfonts.com/css/bahnschrift" rel="stylesheet">
+
+
+
+
+
+    <link href="https://superaprendiz.com.br/franquia/css/font-awesome/css/all.min.css" rel="stylesheet">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="src/js/sidebar-navigation.js" crossorigin="anonymous"></script>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/i18n/defaults-*.min.js"></script>
+
+    <link href="src/style.css" rel="stylesheet">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="left-menu">
+        <button class="menu-button-action" data-side="left">
+            <i class="fas fa-arrow-to-left"></i>
+        </button>
+
+        <div class="sidebar">
+            <a class="option" href="#">
+                <div class="icon">
+                    <i class="far fa-home"></i>
+                </div>
+                <span class="undertaker">Início</span>
+            </a>
+
+            <a href="#" class="option active" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                <div class="icon">
+                    <i class="far fa-send-back"></i>
+                </div>
+                <span class="undertaker">Chamados</span>
+
+            </a>
+
+            <div class="collapse collapse-sidebar" id="collapseExample">
+                <a class="option" href="#">
+                    <div class="square"></div>
+                    <span class="undertaker">Super Estágios</span>
+                </a>
+                <a class="option" href="#">
+                    <div class="square"></div>
+                    <span class="undertaker">Super Aprendiz</span>
+                </a>
+            </div>
+
+            <a href="#" class="option">
+                <div class="icon">
+                    <i class="far fa-chart-pie-alt"></i>
+                </div>
+                <span class="undertaker">Indicadores</span>
+            </a>
+            <a href="#" class="option">
+                <div class="icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <span class="undertaker">SuperWhats</span>
+            </a>
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="right-content container-fluid">
+
+
+
+        <div class="row banner-principal">
+
+            <div class="col-md-12">
+                <div class="banner" style="background-image: url('./src/super-estagios-banner.png');"></div>
+                <h1>Super Estágios</h1>
+                <h5>Chamados Disponíveis</h5>
+                <div class="col-md-4">
+                    <p>A Super Estágios é reconhecida em todo Brasil pela excelência na
+                        administração de
+                        estagiários.</p>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-primary" type="submit">Meus Chamados</button>
+                    <button class="btn back-clr-five" type="submit">Geral</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ticket-counter">
+            <h4>Perfomance</h4>
+            <div class="col-md-4">
+                <div class="counter row">
+                    <div class="col-md-6">
+                        <span>Abertos</span>
+                        <span id="chamados_abertos">16</span>
+                    </div>
+                    <div class="col-md-6 p-0">
+                        <div class="flex-end">
+                            <div class="circle-counter first" style="--p:42; --b:10px;">
+                                <div class="circle-icon">
+                                    <i class="fa fa-bell"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="counter row">
+                    <div class="col-md-6">
+                        <span>Classificados</span>
+                        <span id="chamados_abertos">16</span>
+                    </div>
+                    <div class="col-md-6 p-0">
+                        <div class="flex-end">
+                            <div class="circle-counter second" style="--p:41; --b:10px;">
+                                <div class="circle-icon">
+                                    <i class="fa fa-arrow-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="counter row">
+                    <div class="col-md-6">
+                        <span>Respondidos</span>
+                        <span id="chamados_abertos">16</span>
+                    </div>
+                    <div class="col-md-6 p-0">
+                        <div class="flex-end">
+                            <div class="circle-counter third" style="--p:43; --b:10px; ">
+                                <div class="circle-icon">
+                                    <i class="fa fa-arrow-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tickets">
+
+
+            <div class="ticket-card col-md-12">
+                <div class="top container-fluid">
+                    <div class="content">
+                        <div class="left-ticket">
+                            <div class="tags-header">
+                                <div class="opener-place">
+                                    <div class="letter">
+                                        S
+                                    </div>
+                                    <span>Salvador</span>
+                                </div>
+                                <div class="opener-user">
+                                    <span>Sirlente Conceição Silva</span>
+                                </div>
+
+                                <div class="tag-separator"></div>
+
+                                <div class="extra-opener-user">
+                                    <i class="fa fa-certificate"></i>
+                                    <span>Fernanda Marchi</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="right-ticket">
+                            <div class="options-header ">
+                                <div class="ticket-status ticket-fine">
+                                    <i class="fa fa-bacon"></i>
+                                    <span>Aberto Recentemente</span>
+                                </div>
+                                <!-- <div class="tag-separator"></div> -->
+                                <div class="ticket-relation h100p">
+                                    <select>
+                                        <option>Christian</option>
+                                        <option>Eduardo</option>
+                                        <option>Victor</option>
+                                    </select>
+                                </div>
+
+                                <div class="ticket-doing classic-form button-violet">
+                                    <span>Christian</span>
+                                </div>
+
+                                <div class="ticket-go classic-form button-gold">
+                                    <i class="fa fa-play"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 container-fluid middle">
+                    <h4>Titulo</h4>
+                    <span>Prezados,<br>Bom dia.<br><br>Temos vários chamados que foram abertos e \"resolvidos\"
+                        referente ao não recebimento dos nossos e-mails pelo TRE.<br>Isso está causando um enorme
+                        problema há meses.<br><br>Segue número de chamados:<br>181296 em 18/10/2021<br>182449 em
+                        26/10/2021<br>186242 em 29/11/2021<br>186580 em 01/12/2021<br>Nesse último chamado fizemos as
+                        notificações no problemas via skype (infelizmente não abrimos outros chamados após
+                        isso).<br>Resumindo, o problema continua há meses a TI deles já informou qual o motivo do não
+                        recebimento mas não foi tratado.<br>No aguardo da resolução&nbsp; do problema o mais rápido
+                        possível.<br><br>Att,<br><br>- Link:<br>
+                        <center><b> Chamado autorizado por:Pedro Vieira - 24-05-2022 13:10:</b></center><br><br><br>
+                        <center><b>Fernanda Lerbachi De Marchi - 24-05-2022 15:44:</b></center><br>Olá Sirlene, tudo bem
+                        ?&nbsp;<br><br>Precisamos do número de contato do órgão para podermos tratar isso por
+                        gentileza.<br><br>Tenha uma boa tarde :D<br><br><br>
+                        <center><b>Réplica - 24-05-2022 16:46:</b></center><br>Boa tarde.<br>Segue números.<br>71
+                        3373-7283<br>&nbsp; &nbsp; 3373- 7395<br>&nbsp;3373-7280<br>3373- 7014<br><br><br>
+                        <center><b>Fernanda Lerbachi De Marchi - 27-05-2022 15:52:</b></center><br>Olá Sirlene, tudo bem
+                        ?&nbsp;<br><br>Nosso TI fez algumas alterações e correções, gentileza verificar com o órgão se
+                        eles receberam um e-mail com \"Teste Moltress\".<br><br>Tenha uma boa tarde :D<br><br><br>
+                        <center><b>Réplica - 30-05-2022 12:43:</b></center><br>Bom dia.<br><br>Resposta do TRE: \"Não
+                        chegou na caixa principal nem no spam\"<br>Também enviei um e-mail e não
+                        receberam.&nbsp;<br><br><br>
+                        <center><b>Fernanda Lerbachi De Marchi - 01-07-2022 18:32:</b></center><br>Olá Sirlene, tudo bem
+                        ?&nbsp;<br><br>Nosso setor não está conseguindo entrar em contato com a empresa, gentileza
+                        entrar em contato com eles e agendar um possível horário e dia para entrarmos em contato em que
+                        eles irão atender.<br><br>Tenha uma boa tarde :D<br><br><br>
+                        <center><b>Réplica - 04-07-2022 13:55:</b></center><br>Olá!<br>Boa tarde.<br><br>O horário de
+                        funcionamento do TRE é de segunda a quinta das 13:00 as 18:00 e sexta das 08:00 as
+                        12:00.<br>Ligamos agora e conseguimos contato nos números&nbsp; 3373-7280 e<br>3373-
+                        7014<br><br><br>
+                        <center><b>Fernanda Lerbachi De Marchi - 16-08-2022 18:16:</b></center><br>Olá Sirlene, tudo bem
+                        ?&nbsp;<br><br>Entramos em contato com o número informado e a pessoa que atendeu informou que
+                        aquele não era o número do setor responsável, gentileza verificar se o órgão voltou a receber
+                        nossos e-mails.<br><br>Tenha uma boa tarde :D<br><br><br>
+                        <center><b>Réplica - 29-08-2022 14:26:</b></center><br>Prezados,<br>Boa tarde.<br><br>Acabamos
+                        de entrar em contato com o número 3373-7280 e foi informado que sim, esse é o número do setor,
+                        também tem o ramal 7283.&nbsp;<br>favor entrar em contato novamente e procurar o Sr. Sidney que
+                        é o responsável pela TI.<br><br><br>
+                        <center><b>Gabriela Viana Gabler - 10-11-2022 11:08:</b></center><br>Olá, Sirlene<br>Tudo
+                        bem?<br><br>Ajuste realizado pelo TI junto ao TSE.&nbsp;<br><br>Estamos à disposição. Tenha um
+                        bom dia!&nbsp;<br><br><br>
+                        <center><b>Réplica - 11-11-2022 09:38:</b></center><br>Prezados,<br>Bom dia.<br><br>Encaminhei
+                        um e-mail teste para o TRE-BA ontem e até hoje eles não receberam. Então o problema com os
+                        e-mails ainda não está resolvido. Peço que verifiquem pir favor.&nbsp;<br>
+                    </span>
+                </div>
+
+
+                <div class="col-md-12 container-fluid bottom">
+                    <div class="row h100p">
+                        <div class="col-md-8 left-ticket">
+                            <div class="ticket-data">
+                                <i class="fa fa-stopwatch"></i>
+                                <span>07 de Fevereiro de 2023 às 11:59</span>
+                            </div>
+
+                            <div class="ticket-days-counter">
+                                <span>21 dias</span>
+                            </div>
+
+                            <div class="ticker-number">
+                                <i class="fa fa-ticket"></i>
+                                <span>230887</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 right-ticket">
+                            <i class="fa fa-comment"></i>
+                            <span>5 comentários</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="right-menu">
+        <button class="menu-button-action" data-side="right">
+            <i class="fas fa-arrow-to-left"></i>
+        </button>
+    </div>
+</body>
+
+<script>
+
+    handleDeviceChange(window.matchMedia("(max-width: 1440px)"))
+    $('select').selectpicker();
+
+    const smallDevice = window.matchMedia("(max-width: 1440px)");
+
+    smallDevice.addListener(handleDeviceChange);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const verificaResolucaoElemento = (width, max_width) => max_width > width;
+    const alterouResolucaoElemento = (width, max_width) => max_width == width;
+    const verificaExistenciaClasse = (classe, elemento) => elemento.classList.contains(classe);
+
+    const gerenciaClassesElemento = ({ classe }, elemento, width, max_width) => {
+        if (alterouResolucaoElemento(width, max_width)) {
+            removeAdicionaClasseAutomatico(classe, elemento)
+        }
+    }
+
+    const removeAdicionaClasseAutomatico = (classe, elemento) => {
+        console.log("foi de vase")
+        if (verificaExistenciaClasse(classe, elemento)) {
+            elemento.classList.remove(classe);
+            console.log("remove")
+        } else {
+            elemento.classList.add(classe);
+            console.log("adiciona")
+        }
+    }
+
+    const observarResolucao = (element, max_size, callback, params) => {
+
+        const observer = new ResizeObserver(element => {
+            let e = element[0];
+            let width = e.contentRect.width;
+            callback(params,element, width, max_size);
+        })
+
+        observer.observe(element)
+        return observer;
+    }
+
+
+    const ticket_top = document.querySelector('.ticket-card .top');
+    
+    var observer_ticket = [];
+
+    observer_ticket.push(observarResolucao(ticket_top, 1100, gerenciaClassesElemento, { classe: 'query-flex' }));
+
+
+
+    $(document).on('DOMNodeInserted', function (e) {
+        if (e.target.matches('.ticket-card .top')) {
+            alteraTamanhoElemento(e.target, (width, element) => {
+
+            });
+        }
+    });
+
+</script>
