@@ -55,54 +55,170 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="box">
-          <h2>Div Esquerda</h2>
-          <div class="row d-lg-none">
-            <div class="col-12">
-                <button id="toggleButton" class="btn btn-primary">Mostrar/Esconder</button>
+    <div class="container">
+        <div class="row p-3 card-header d-flex">
+                <div class="bkg-header-items sqr-outlined">
+
+                    <div class="sqr sqr-outlined">
+                        <div class="sqr-circle">
+                            C
+                        </div>
+                        <span class="ms-2">Barra da Tijuca</span>
+                    </div>
+
+                    <div class="sd-color description">
+                        <span>Nome Franqueado</span>
+                    </div>
+
+
+                    <div class="sd-color description bars">
+                        <span>|</span>
+                    </div>
+                    
+                    <div class="sd-color description">
+                        <i class="fa fa-certificate"></i>
+                        <span class="ms-2">SAF Responsável</span>
+                    </div>
+
+                    <div class="d-lg-none">
+                        <div id="toggleButton">
+                            <i class="fas fa-ellipsis-v"></i>
+                            <span>Expandir</span>
+                        </div>
+                    </div>
+
+
+                </div>
+            <div class="col-lg-6 d-lg-block" id="divDireita">
+                <div class="box row">
+                    <div class="col-md-4">D</div>
+                    <div class="col-md-3">E</div>
+                    <div class="col-md-3">E</div>
+                    <div class="col-md-2">F</div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="col-lg-6 d-lg-block" id="divDireita">
-        <div class="box">
-          <h2>Div Direita</h2>
-        </div>
-      </div>
     </div>
 
-  </div>
+    <script>
+        var toggleButton = document.getElementById('toggleButton');
+        var divDireita = document.getElementById('divDireita');
+        var isDivDireitaVisible = false;
 
-  <script>
-    var toggleButton = document.getElementById('toggleButton');
-    var divDireita = document.getElementById('divDireita');
-    var isDivDireitaVisible = false;
+        toggleButton.addEventListener('click', function () {
+            isDivDireitaVisible = !isDivDireitaVisible;
+            toggleDivDireitaVisibility();
+        });
 
-    toggleButton.addEventListener('click', function () {
-      isDivDireitaVisible = !isDivDireitaVisible;
-      toggleDivDireitaVisibility();
-    });
+        function toggleDivDireitaVisibility() {
+            if (window.innerWidth < 1200 && isDivDireitaVisible) {
+                divDireita.classList.remove('d-none');
+            } else {
+                divDireita.classList.add('d-none');
+            }
+        }
 
-    function toggleDivDireitaVisibility() {
-      if (window.innerWidth < 1000 && isDivDireitaVisible) {
-        divDireita.classList.remove('d-none');
-      } else {
-        divDireita.classList.add('d-none');
-      }
-    }
+        function handleResize() {
+            toggleDivDireitaVisibility();
+        }
 
-    function handleResize() {
-      toggleDivDireitaVisibility();
-    }
+        window.addEventListener('resize', handleResize);
+        handleResize();
+    </script>
 
-    window.addEventListener('resize', handleResize);
-    handleResize();
-  </script>
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
+
+
+<style>
+    .container {
+        background-color: red;
+
+        min-height: 90px;
+    }
+
+    .sqr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: center;
+        background-color: #2b2e49;
+        border-radius: 6px;
+        padding: 6px;
+    }
+
+    .sqr-outlined {
+        border: 2px solid #3c405e;
+    }
+
+    .sqr-outlined-b {}
+
+    .container .box {
+        height: 100%;
+    }
+
+    .sqr-circle {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        background-color: #ccc;
+        color: white;
+        /* font-weight: bold; */
+    }
+
+    .custom-max-width {
+        max-width: 400px;
+        /* Defina o valor máximo desejado */
+    }
+
+    .bkg-header-items {
+        background: #1d2033;
+        padding: 6px;
+        border-radius: 8px;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+
+    .bkg-header-items .description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 15px;
+    }
+
+    .sd-color {
+        color: #979cbb
+    }
+
+    .bars {
+        padding: 0px !important;
+    }
+
+    .card-header{
+        flex-direction: column;
+    }
+
+    @media (max-width: 1000px) {
+        .bars {
+            display: none;
+        }
+
+        .container .bkg-header-items>div {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .container {
+            min-height: 240px;
+
+        }
+    }
+</style>

@@ -214,6 +214,7 @@
                                     <span>Fernanda Marchi</span>
                                 </div>
                             </div>
+                            <i class="far fa-info-circle toggleCardProps"></i>
                         </div>
 
                         <div class="right-ticket">
@@ -377,7 +378,7 @@
         const observer = new ResizeObserver(element => {
             let e = element[0];
             let width = e.contentRect.width;
-            callback(params,element, width, max_size);
+            callback(params, element, width, max_size);
         })
 
         observer.observe(element)
@@ -386,7 +387,7 @@
 
 
     const ticket_top = document.querySelector('.ticket-card .top');
-    
+
     var observer_ticket = [];
 
     observer_ticket.push(observarResolucao(ticket_top, 1100, gerenciaClassesElemento, { classe: 'query-flex' }));
@@ -400,5 +401,41 @@
             });
         }
     });
+
+
+    var toggleButton = document.querySelector('.toggleCardProps');
+    var divDireita = document.querySelector('.right-ticket');
+    var isDivDireitaVisible = false;
+
+    toggleButton.addEventListener('click', function () {
+        console.log("oliver twists")
+        isDivDireitaVisible = !isDivDireitaVisible;
+        toggleDivDireitaVisibility();
+    });
+
+    function toggleDivDireitaVisibility() {
+        // if(window.innerWidth < 1300){
+        //     divDireita.classList.add('d-none');
+        // }else{
+
+        // }
+
+        if (window.innerWidth < 1300 && isDivDireitaVisible) {
+            divDireita.classList.remove('d-none');
+
+        } else {
+            divDireita.classList.add('d-none');
+
+        }
+    }
+
+    function handleResize() {
+        toggleDivDireitaVisibility();
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+
 
 </script>
