@@ -802,3 +802,44 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+
+#tickets-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#tickets-nav .search-ticket {
+  position: relative;
+}
+
+#tickets-nav .search-ticket i {
+  position: absolute;
+  color: #737692 !important;
+  right: 15px;
+  top: 16px;
+}
+
+#tickets-nav .search-ticket input {
+  width: 200px;
+  padding: 10px;
+  border: 3px solid #414566;
+  background-color: var(--sixth-color);
+  border-radius: 8px;
+  font-size: 15px;
+  color: #7d7e97;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+.search-ticket input::placeholder {
+
+  color: #737692;
+  font-size: 15px;
+}
