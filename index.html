@@ -190,17 +190,24 @@
             </div>
         </div>
 
-        <h4>Chamados</h4>
+        <div class="ticket-area-header d-flex justify-content-between pt-4 pb-4">
+            <h4>Chamados</h4>
+            <div id="refresh-tickets">
+                <span>Última vez atualizado às 18:19:30</span>
+                <i class="fas fa-sync-alt rotate-att" ></i>
+            </div>
+        </div>
 
 
         <div id="tickets-nav">
-            <div>
-                <button>Meus Chamados</button>
+            <div >
+                <button class="active">Meus Chamados</button>
                 <button>Geral</button>
                 <button>Sem Vínculo</button>
                 <button>Respondidos</button>
                 <button class="d-none">Alguém</button>
             </div>
+            <div></div>
             <div class="search-ticket">
                 <i class="fa fa-search" style="color:#EEC800"></i>
                 <input type="number" placeholder="Pesquisar Chamado" id="procura_chamado">
@@ -422,7 +429,7 @@
 
     var toggleButton = document.querySelector('.toggleCardProps');
     var divDireita = document.querySelector('.right-ticket');
-    var isDivDireitaVisible = false;
+    var isDivDireitaVisible = true;
 
     toggleButton.addEventListener('click', function () {
         console.log("oliver twists")
@@ -431,17 +438,12 @@
     });
 
     function toggleDivDireitaVisibility() {
-        // if(window.innerWidth < 1300){
-        //     divDireita.classList.add('d-none');
-        // }else{
-
-        // }
 
         if (window.innerWidth < 1300 && isDivDireitaVisible) {
-            divDireita.classList.remove('d-none');
+            divDireita.classList.add('d-none');
 
         } else {
-            divDireita.classList.add('d-none');
+            divDireita.classList.remove('d-none');
 
         }
     }

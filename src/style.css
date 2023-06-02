@@ -826,7 +826,7 @@ ul {
   background-color: var(--sixth-color);
   border-radius: 8px;
   font-size: 15px;
-  color: #7d7e97;
+  color: #fff;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -842,4 +842,23 @@ input[type=number]::-webkit-outer-spin-button {
 
   color: #737692;
   font-size: 15px;
+}
+
+#tickets-nav button{
+  border: none;
+  padding: 10px 20px;
+  
+  background-color: #2f324e;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #fff;
+  margin-right: 5px;
+}
+
+#tickets-nav button.active{
+  border: 3px solid #414566;  
+}
+
+#refresh-tickets{
+  color: #737692
 }
