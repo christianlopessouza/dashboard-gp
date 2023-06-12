@@ -1,0 +1,520 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://superaprendiz.com.br/franquia/css/font-awesome/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/bahnschrift" rel="stylesheet">
+
+
+
+
+
+
+    <link href="https://superaprendiz.com.br/franquia/css/font-awesome/css/all.min.css" rel="stylesheet">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/i18n/defaults-*.min.js"></script>
+    <link href="src/css/global.css" rel="stylesheet">
+    <link href="src/css/main.css" rel="stylesheet">
+
+
+</head>
+<style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="left-sidebar" id="left_sidebar">
+                <!-- Conteúdo da sidebar esquerda -->
+                <div class="sidebar-actors">
+                    <button class="btn" onclick="toggleSidebar('left_sidebar')">
+                        <i class="fas fa-arrow-to-left" id="left_sidebar_icon"></i>
+                    </button>
+                </div>
+
+                <div class="sidebar-options">
+                    <a class="option active" href="#">
+                        <div class="icon">
+                            <i class="far fa-home"></i>
+                        </div>
+                        <span class="fade-out-left">Início</span>
+                    </a>
+
+                    <a href="#" class="option " data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        <div class="icon">
+                            <i class="far fa-send-back"></i>
+                        </div>
+                        <span class="fade-out-left">Chamados</span>
+
+                    </a>
+
+                    <div class="collapse collapse-sidebar" id="collapseExample">
+                        <a href="#" class="option ">
+                            <div class="icon d-flex justify-content-center">
+                                <div class="square-project"
+                                    style="background-image: url(https://media.licdn.com/dms/image/C4E0BAQECwtSbuUCKyQ/company-logo_200_200/0/1615382597896?e=2147483647&v=beta&t=hAVqxq1qrGslxaTxixDBy-WTMQaoX1swkxVULyWf48s);">
+                                </div>
+                            </div>
+                            <span class="fade-out-left ms-2">Super Estágios</span>
+                        </a>
+
+                        <a href="#" class="option ">
+                            <div class="icon d-flex justify-content-center">
+                                <div class="square-project"
+                                    style="background-image: url(https://play-lh.googleusercontent.com/XY3QIhImZu6Qgs9wCAbFLybSkLneence3iskUNwDNiTdJXobqUpcvWRi4EMbO7FIt7NT);">
+                                </div>
+                            </div>
+                            <span class="fade-out-left ms-2">Super Aprendiz</span>
+                        </a>
+
+                        <a href="#" class="option">
+                            <div class="icon d-flex justify-content-center">
+                                <div class="square-project"
+                                    style="background-image: url(https://play-lh.googleusercontent.com/AMl-AgiNPezIF4Et0m5c_-Cl-RcVthhU304oiNQaUf3DKKOq6wsBl0NV1uY1kPCuAnUI);">
+                                </div>
+                            </div>
+                            <span class="fade-out-left ms-2">Conta4U</span>
+                        </a>
+
+
+
+                    </div>
+
+                    <a href="#" class="option">
+                        <div class="icon">
+                            <i class="far fa-chart-pie-alt"></i>
+                        </div>
+                        <span class="fade-out-left">Indicadores</span>
+                    </a>
+                    <a href="#" class="option">
+                        <div class="icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <span class="fade-out-left">SuperWhats</span>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <div class="col content-expanded">
+                <div id="ticketArea">
+                    <div class="ticket-main-card br-20">
+                        <div class="header ms-4 me-4">
+                            <div class="row align-items-center">
+                                <div class="col-md-2">
+                                    <div>
+                                        <span class="ps-3 pe-3 p-2 br-6 ticker-number fs-14">265478</span>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-8 d-flex justify-content-center h-100 sender-info">
+                                    <div class="col-auto origin d-flex align-items-center justify-content-center">
+                                        <div class="circle me-3">
+                                            C
+                                        </div>
+                                        <span>Cuiabá</span>
+                                    </div>
+                                    <div class="col-auto origin-comp d-flex align-items-center justify-content-center ps-4 pe-4">
+                                        <span>Emerson Carvalho Redez</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 d-flex justify-content-end">
+                                    <div class="d-flex align-items-center timer">
+                                        <i class="far fa-clock me-1"></i>
+                                        <span>5 dias</span>
+                                    </div>
+                                    <div class="form-check form-switch ms-2">
+                                        <input class="form-check-input ticket-player" type="checkbox" role="switch"
+                                            id="flexSwitchCheckChecked" checked="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="separator">
+
+                        <div class="content ms-4 me-4 mb-4">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 d-flex align-items-center mt-3">
+                                    <div class="circle me-3">
+                                        <i class="fas fa-ticket-alt"></i>
+                                    </div>  
+                                    <h5 class="m-0">Atualização de Supervisores nos Polos corretos</h5>
+                                </div>
+                                <div class="col-md-6 d-flex justify-content-end align-items-center">
+                                    <span class="fs-14">06, Jun de 2023 às 23:39</span>
+                                </div>
+                            </div>
+
+                            <div class="ticket-text mt-3">
+                                <span>
+                                    Boa noite Equipe!
+                                    <br><br>
+                                    Recentemente fizemos uma migração de estagiários do Grupo Soul Malls e identificamos que vários Supervisores de Estágio estão alocados em Polos diferentes. O cadastro deste grupo econômico se deu por Polo descentralizado, bem como o seu faturamento. Existe o acesso principal geral e os acessos de gestores de cada Polo.
+                                    <br><br>
+                                    Apenas o cadastro dos Supervisores vem aparecendo esta discrepância. 
+                                    <br><br>
+                                    Prints de tela enviada ao meu SAF.
+                                    <br><br>
+                                    Fico no aguardo do auxílio.
+                                </span>
+                            </div>
+
+
+                            <div class="bond d-flex mt-4">
+                                <div class="support-bond p-2 ps-4 pe-4 br-6 me-2">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Beatriz Pedrosa</span>
+                                </div>
+
+
+
+                                <div class="ticket-relation h100p ps-2 pe-4 br-6">
+                                    <select>
+                                        <option>Christian</option>
+                                        <option>Eduardo</option>
+                                        <option>Victor</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="comments mt-4 br-20 d-flex flex-column align-items-center">
+                                <button type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                                    aria-expanded="false" aria-controls="collapse2"
+                                    class="more-comments d-flex align-items-center">
+                                    <i class="fad fa-comments-alt me-2"></i>
+                                    <span class="fs-14">Visualizar 1 comentário anterior</span>
+                                </button>
+
+                                <!-- 
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">
+                                    <i class="fas fa-reply"></i>
+                                    Responder
+                                </button> -->
+
+                                <div class="collapse" id="collapse2">
+                                    <div class="comment ms-3 me-3 mt-1">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-6 d-flex align-items-center mt-3">
+                                                <div class="circle me-2" style="background: #c5c01f !important;"></div>
+                                                <h6 class="m-0">Gabriela Gabler</h6>
+                                            </div>
+                                            <div class="col-md-6 d-flex justify-content-end align-items-center data ">
+                                                <span class="fs-14">26, Dez de 2023 às 17:11</span>
+                                            </div>
+                                            <div class="ticket-text mt-2 mb-3">
+                                                <span class="fs-14">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry. LoremIpsum has been the industry's standard dummy text
+                                                    ever
+                                                    since the 1500s,when anunknown printer took a galley of type and
+                                                    scrambled it to make a type specimen book.
+                                                    LoremIpsum has been the industry's standard dummy text ever since
+                                                    the
+                                                    1500s,when anunknown printer took a galley of type and scrambled it
+                                                    to
+                                                    make a type specimen book.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="separator">
+
+                                </div>
+
+                                <div class="comment ms-3 me-3 mt-1">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6 d-flex align-items-center mt-3">
+                                            <div class="circle me-2" style="background: #c5c01f !important;"></div>
+                                            <h6 class="m-0">Beatriz Pedrosa</h6>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-end align-items-center data ">
+                                            <span class="fs-14">07, Jun de 2023 às 08:10</span>
+                                        </div>
+                                        <div class="ticket-text mt-2 mb-3">
+                                            <span class="fs-15">
+                                                na tela acima, aparecem registrados em um Polo e ao visualizar aparece outro polo	
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="separator">
+                                <div class="comment ms-4 me-4 mt-1">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6 d-flex align-items-center mt-3">
+                                            <div class="circle me-2" style="background: rgb(115, 255, 0) !important;">
+                                            </div>
+                                            <h6 class="m-0">Aienidy</h6>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-end align-items-center data ">
+                                            <span class="fs-14">26, Dez de 2023 às 17:11</span>
+                                        </div>
+                                        <div class="ticket-text mt-2 mb-3">
+                                            <span class="fs-15">
+                                                gentileza corrigir
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="footer ps-4 pe-4">
+                            <div class="collapse" id="collapse">
+
+                                <div class="col-md-12 d-flex justify-content-end">
+                                    <button class=" d-flex closed align-items-center mt-2" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false"
+                                        aria-controls="collapse">
+                                        <i class="far fa-times-circle me-2 fs-5"></i>
+                                        <span>Fechar</span>
+                                    </button>
+                                </div>
+
+                                <div class="col-md-12 mt-2">
+                                    <textarea placeholder="Digite sua respota aqui" rows="4"
+                                        class=" br-20 p-3 w-100"></textarea>
+                                </div>
+
+                            </div>
+                            <div class="row pt-2 pb-2 ft-desc">
+                                <div class="col-md-6 d-flex align-items-center">
+                                    <i class="fas fa-info-circle me-2 fs-6"></i>
+                                    <span>Sua reposta será direcionada ao setor selecionado ao lado</span>
+
+                                </div>
+                                <div class="col-md-6 d-flex justify-content-end align-items-center">
+                                    <button class="p-2 br-6 fs-15 answer" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">
+                                        <i class="fas fa-reply me-2"></i>
+                                        Responder
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+            <div class="right-sidebar sidebar-collapsed d-flex flex-column justify-content-between" id="right_sidebar">
+                <!-- Conteúdo da sidebar direita -->
+                <div>
+                    <div class="sidebar-actors">
+                        <button class="btn" onclick="toggleSidebar('right_sidebar')">
+                            <i class="fas fa-arrow-to-left" id="right_sidebar_icon"></i>
+                        </button><br>
+                    </div>
+                    <div class="fade-out-right hidden">
+                        <div class="profile d-flex">
+                            <div class="profile-pic d-flex justify-content-center align-items-center br-6">
+                                <span>C</span>
+                            </div>
+                            <div class="profile-stats ms-3">
+                                <span>Christian</span>
+                                <div class="d-flex">
+                                    <div
+                                        class="circle circle-done d-flex justify-content-center align-items-center me-2">
+                                        1
+                                    </div>
+                                    <div
+                                        class="circle circle-pending d-flex justify-content-center align-items-center ">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="titulo-separador mt-4 ">
+                            <span class="substitle-upper">Colaboradores</span>
+                        </div>
+
+                        <div class="others-profile profile mt-3">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <div class="profile-pic d-flex justify-content-center align-items-center br-6">
+                                        <span>V</span>
+                                    </div>
+                                    <div class="profile-stats ms-3 d-flex align-items-center">
+                                        <span>Victor</span>
+                                    </div>
+                                </div>
+
+                                <div class="profile-stats stats d-flex align-items-center justify-content-end">
+                                    <div class="d-flex me-2">
+                                        <div
+                                            class="circle circle-done d-flex justify-content-center align-items-center me-2">
+                                            1
+                                        </div>
+                                        <div
+                                            class="circle circle-pending d-flex justify-content-center align-items-center ">
+                                            2
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="others-profile profile mt-3">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <div class="profile-pic d-flex justify-content-center align-items-center br-6">
+                                        <span>M</span>
+                                    </div>
+                                    <div class="profile-stats ms-3 d-flex align-items-center">
+                                        <span>Murilo</span>
+                                    </div>
+                                </div>
+
+                                <div class="profile-stats stats d-flex align-items-center justify-content-end">
+                                    <div class="d-flex me-2">
+                                        <div
+                                            class="circle circle-done d-flex justify-content-center align-items-center me-2">
+                                            4
+                                        </div>
+                                        <div
+                                            class="circle circle-pending d-flex justify-content-center align-items-center ">
+                                            12
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-100 theme-mode d-flex justify-content-center mb-4">
+                        <button class="btn substitle-upper">
+                            <i class="fas fa-lightbulb-on"></i>
+                            <span class="fade-out-right hidden">Light</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $('select').selectpicker();
+            function toggleSidebar(sidebarId) {
+                const sidebar = document.getElementById(sidebarId);
+                const toggleButton = document.getElementById(sidebarId + "_icon");
+                console.log(toggleButton)
+
+
+
+                sidebar.classList.toggle('sidebar-collapsed');
+                const content = document.querySelector('.content-expanded');
+                const side = sidebarId.split('_')[0];
+                hideElement(side);
+                toggleButton.classList.toggle('rotate');
+
+            }
+
+
+            function addClassByScreenWidth() {
+                const screenWidth = window.innerWidth;
+
+
+                ['left_sidebar'].forEach(element_id => {
+                    const element = document.getElementById(element_id);
+                    if (screenWidth < 1440) {
+                        if (!Array.from(element.classList).includes('sidebar-collapsed')) {
+                            toggleSidebar(element_id)
+                        }
+
+                    } else {
+                        if (Array.from(element.classList).includes('sidebar-collapsed')) {
+                            toggleSidebar(element_id)
+                        }
+                    }
+                })
+
+            }
+
+            function hideElement(side) {
+                const elements = document.querySelectorAll(`.fade-out-${side}`);
+                const isCollapsed = document.querySelector(`#${side}_sidebar`).classList.contains('sidebar-collapsed');
+
+                elements.forEach(element => {
+                    if (isCollapsed) {
+                        element.classList.add('hidden');
+                    } else {
+                        element.classList.remove('hidden');
+                    }
+                });
+            }
+
+            // Chamar a função quando a página carregar
+            addClassByScreenWidth();
+
+            // Chamar a função quando a tela for redimensionada
+            window.addEventListener('resize', addClassByScreenWidth);
+
+
+
+        </script>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script> -->
+</body>

@@ -1,0 +1,308 @@
+
+*{
+    font-family: 'Bahnschrift';
+}
+
+*:focus{
+    outline: none;
+}
+
+html {
+    --main-a-color: #171b2a;
+    --main-b-color: #1d2033;
+    --main-c-color: #fff;
+    --main-d-color: #646885;
+    --main-e-color: #2f324e;
+    --main-f-color: #53566f;
+    --main-g-color: #babed3;
+    --main-h-color: #393d5a;
+    --main-i-color: #24273d;
+
+
+    --secondary-a-color: #fff;
+    --secondary-b-color: #343647;
+
+    --stuffs-a-color: #d9b04f;
+    --stuffs-b-color: #818591;
+    
+}
+
+body {
+    overflow-x: hidden;
+    height: 100vh;
+    background: var(--main-b-color);
+}
+
+/*CENTER*/
+.content-expanded {
+    height: 100vh;
+}
+
+/*SIDEBAR*/
+@media screen and (max-width: 1440px) {
+
+    #right_sidebar,
+    #left_sidebar {
+        position: fixed;
+    }
+
+    #right_sidebar {
+        right: 0;
+    }
+
+    #left_sidebar {
+        left: 0;
+    }
+
+
+}
+
+/*config geral siderbars*/
+#right_sidebar,
+#left_sidebar {
+    width: 260px;
+    background: var(--main-a-color);
+    transition: width 0.35s ease-in-out;
+    height: 100vh;
+    position: relative;
+    color: var(--secondary-a-color);
+    margin: 0px;
+}
+
+
+
+/*botoes de expansao dos menus*/
+.sidebar-actors {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sidebar-actors button {
+    width: 100%;
+}
+
+
+.sidebar-actors i.rotate {
+    transition: transform 0.5s;
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+
+.sidebar-actors i {
+    transition: transform 0.5s;
+    transform: rotate(720deg);
+}
+
+.sidebar-actors button {
+    background: var(--secondary-b-color);
+    color: var(--stuffs-a-color);
+}
+
+.sidebar-actors button:hover {
+    color: #fff;
+}
+
+/*movimento de fade dos menus*/
+.fade-out-left {
+    opacity: 1;
+    transition: opacity 0.4s, transform 0.4s ease-in-out;
+}
+
+.fade-out-left.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.fade-out-right {
+    opacity: 1;
+    transition: opacity 0.35s, transform 0.35s ease-in-out;
+    width: 240px;
+}
+
+.fade-out-right.hidden {
+    opacity: 0;
+    transform: translateX(35%);
+    position: absolute;
+
+}
+
+
+
+/*menus sidebar esquerda*/
+.sidebar-options a {
+    color: var(--secondary-a-color);
+    text-decoration: none;
+    height: 60px;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.sidebar-options a.active {
+    background: var(--secondary-b-color);
+    font-weight: 600;
+}
+
+.sidebar-options a:not(.active):hover {
+    background: var(--secondary-b-color);
+    opacity: 0.6;
+}
+
+
+.sidebar-options a.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--secondary-a-color);
+    border-radius: 8px 0px 0px 8px;
+}
+
+.sidebar-options i {
+    font-size: 24px;
+}
+
+.sidebar-options {
+    margin-top: 35px;
+}
+
+.sidebar-options .square-project {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-left: -6px;
+    background-size: cover;
+    background-position: center;
+    background-size: 120%;
+}
+
+
+/*submenu sidebar esquerda*/
+.sidebar-collapsed {
+    width: 80px !important;
+}
+
+.sidebar-options .icon {
+    width: 50px;
+
+}
+
+/*perfil sidebar direita*/
+
+.profile:first-child {
+    margin-top: 35px;
+}
+
+
+.profile .profile-pic {
+    width: 54px;
+    height: 54px;
+    background: red;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.profile .profile-stats .circle {
+    width: 22px;
+    height: 22px;
+    font-size: 13px;
+}
+
+.profile .profile-stats>span {
+    font-size: 17px;
+}
+
+/*config exclusiva perfil de outros sidebar direita*/
+.others-profile .profile-pic{
+    width: 40px;
+    height: 40px;
+}
+
+/*botao troca de tema*/
+.theme-mode button .fade-out-right.hidden{
+    position: relative;
+    display: none;
+}
+
+.theme-mode button > span{
+    transition: opacity 0.4s, transform 0.4s ease-in-out;
+}
+
+.theme-mode button{
+    background: var(--secondary-b-color);
+    color: var(--stuffs-b-color);
+    border-radius: 50px;
+    width: 120px;
+    transition: opacity 0.4s, transform 0.4s ease-in-out;
+}
+
+/*geral utilities*/
+.circle-done {
+    background: var(--stuffs-a-color);
+    color: var(--main-a-color);
+    font-weight: 700;
+}
+
+.circle-pending {
+    background: var(--main-c-color);
+    color: var(--main-a-color);
+    font-weight: 700;
+}
+
+.titulo-separador{
+    color: var(--main-d-color);
+}
+
+
+
+/*bootstrap changes*/
+.btn {
+    box-shadow: none !important;
+}
+
+.content-expanded {
+    background: var(--main-b-color);
+}
+
+.br-6 {
+    border-radius: 6px;
+}
+
+.br-8 {
+    border-radius: 8px;
+}
+
+.br-20 {
+    border-radius: 20px;
+}
+
+.substitle-upper{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.circle {
+    border-radius: 100%;
+    padding-right: 1.2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15{
+    font-size: 15px;
+
+}

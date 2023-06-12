@@ -1,0 +1,231 @@
+.content-expanded {
+    color: var(--main-c-color);
+
+}
+
+.ticket-main-card {
+    height: auto;
+    background: var(--main-e-color);
+
+}
+
+.ticket-main-card .header>div {
+    height: 60px;
+
+}
+
+.ticket-main-card .origin-comp {
+    color: var(--main-g-color);
+}
+
+.ticket-main-card .origin {
+    border-bottom: orange 5px solid;
+    padding-bottom: 0;
+    position: relative;
+    bottom: -1.5px;
+    z-index: 2;
+    font-weight: 600;
+}
+
+.ticket-main-card .origin>.circle {
+    background: orange;
+    width: 26px;
+    height: 26px;
+}
+
+
+
+.ticket-main-card .sender-info>div {
+    min-width: 150px;
+}
+
+.ticket-main-card .content {
+    min-height: 100px
+}
+
+
+.ticket-player {
+    width: 50px !important;
+    height: 20px !important;
+}
+
+.content-expanded {
+    padding: 0px 120px;
+}
+
+#ticketArea .content .circle {
+    background: #ffaa0045;
+    color: #ffaa00;
+    height: 50px;
+    width: 50px;
+    font-size: 22px;
+    transform: rotate(45deg);
+}
+
+.ticket-text {
+    line-height: 25px;
+    color: var(--main-g-color);
+}
+
+.support-bond {
+    background: #ffaa0045;
+    color: #ffaa00;
+}
+
+.ticker-number {
+    background: var(--main-f-color);
+    color: var(--main-g-color);
+}
+
+.comments {
+    border: 2px solid var(--main-f-color);
+    position: relative;
+}
+
+.comments .circle {
+    height: 10px !important;
+    width: 10px !important;
+}
+
+.separator {
+    border-top: 2px solid var(--main-g-color);
+    margin: 0;
+    width: 100%;
+}
+
+.more-comments {
+    position: absolute;
+    border-radius: 20px;
+    border: 2px solid var(--main-f-color);
+    padding: 0px 30px;
+    height: 32px;
+    top: -18px;
+    background: #fff;
+    background: var(--main-e-color);
+    color: var(--main-c-color);
+
+}
+
+.comment {
+    width: 97%;
+}
+
+.footer textarea {
+    box-sizing: border-box;
+    resize: none;
+    border: 2px solid var(--main-f-color);
+    font-size: 15px;
+    color: #fff;
+    background: var(--main-i-color);
+}
+
+
+.footer textarea::placeholder {
+    color: var(--main-g-color);
+    font-size: 15px;
+  }
+  
+
+.footer {
+    background: var(--main-h-color);
+    border-radius: 0px 0px 20px 20px;
+
+}
+
+.closed {
+    border-radius: 100px;
+    background: none;
+    border: 2px solid #df5252;
+    color: #df5252;
+    height: 35px;
+}
+
+.ft-desc {
+    font-size: 14px;
+    color: var(--main-g-color);
+}
+
+
+
+.timer {
+    margin-top: 4px;
+}
+
+
+.dropdown-menu {
+    background-color: var(--main-f-color) !important;
+}
+
+.dropdown-menu .dropdown-item {
+    color: var(--main-g-color);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--main-h-color);
+  color: var(--main-c-color)
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background: none;
+}
+
+.bootstrap-select .dropdown-toggle:focus,
+.bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+  outline: none !important;
+  width: 100%;
+}
+
+.btn-check:focus+.btn-light,
+.btn-light:focus,
+.btn-check:active+.btn-light:focus,
+.btn-check:checked+.btn-light:focus,
+.btn-light.active:focus,
+.btn-light:active:focus,
+.show>.btn-light.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active,
+.classic-form:hover,
+.classic-form:focus,
+.classic-form:hover {
+  background-color: var(--main-f-color) !important;
+  border-color: var(--main-d-color);
+  color: 2px solid var(--main-g-color);
+}
+
+.btn-light {
+  color: var(--main-g-color);
+  background-color: var(--main-f-color) !important;
+  border: 2px solid var(--main-d-color);
+
+}
+
+.ticket-relation{
+    width: 200px !important;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+    width: 100%;
+}
+
+.answer{
+    color: rgb(88, 195, 228);
+    background: rgb(64, 102, 133);
+    border: none;
+}
+
+/*
+#47ff92
+
+
+#fff247
+
+
+#ff4747
+*/
