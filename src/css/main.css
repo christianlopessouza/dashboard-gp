@@ -123,8 +123,8 @@
 .footer textarea::placeholder {
     color: var(--main-g-color);
     font-size: 15px;
-  }
-  
+}
+
 
 .footer {
     background: var(--main-h-color);
@@ -162,19 +162,19 @@
 
 .dropdown-item.active,
 .dropdown-item:active {
-  background-color: var(--main-h-color);
-  color: var(--main-c-color)
+    background-color: var(--main-h-color);
+    color: var(--main-c-color)
 }
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-  background: none;
+    background: none;
 }
 
 .bootstrap-select .dropdown-toggle:focus,
 .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
-  outline: none !important;
-  width: 100%;
+    outline: none !important;
+    width: 100%;
 }
 
 .btn-check:focus+.btn-light,
@@ -184,7 +184,7 @@
 .btn-light.active:focus,
 .btn-light:active:focus,
 .show>.btn-light.dropdown-toggle:focus {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 
@@ -194,27 +194,27 @@
 .classic-form:hover,
 .classic-form:focus,
 .classic-form:hover {
-  background-color: var(--main-f-color) !important;
-  border-color: var(--main-d-color);
-  color: 2px solid var(--main-g-color);
+    background-color: var(--main-f-color) !important;
+    border-color: var(--main-d-color);
+    color: 2px solid var(--main-g-color);
 }
 
 .btn-light {
-  color: var(--main-g-color);
-  background-color: var(--main-f-color) !important;
-  border: 2px solid var(--main-d-color);
+    color: var(--main-g-color);
+    background-color: var(--main-f-color) !important;
+    border: 2px solid var(--main-d-color);
 
 }
 
-.ticket-relation{
+.ticket-relation {
     width: 200px !important;
 }
 
-.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
     width: 100%;
 }
 
-.answer{
+.answer {
     color: rgb(88, 195, 228);
     background: rgb(64, 102, 133);
     border: none;
@@ -229,3 +229,61 @@
 
 #ff4747
 */
+
+/*INDICADORES*/
+#chamados_respondidos>div {
+    background: var(--main-e-color);
+}
+
+#chamados_respondidos h1 {
+    font-weight: 700;
+}
+
+#chamados_respondidos button {
+    border: none;
+    height: 38px;
+    background: #36bcba;
+    font-weight: 500;
+
+}
+
+#chamados_abertos {
+    background: var(--main-e-color);
+}
+
+#chamados_classificados > div{
+    background: var(--main-e-color);
+}
+
+#chamados_classificados h1 {
+    font-weight: 700;
+}
+
+.bars-chart .bars{
+    width: 55px;
+    background: var(--main-f-color);
+    font-size: 13px;
+    color: var(--main-g-color);
+}
+
+.bars-chart .active{
+    background: var(--stuffs-a-color);
+    color: var(--main-b-color);
+    font-weight: 800;
+}
+
+.today-chart-info{
+    position: relative;
+}
+
+.today-chart-info span {
+    color: var(--main-a-color);
+    z-index: 1;
+    position: absolute;
+    font-weight: 900;
+}
+.today-chart-info i {
+    font-size: 34px;
+    margin-bottom: 6px;
+    color: var(--stuffs-a-color);
+}
