@@ -231,13 +231,7 @@
 */
 
 /*INDICADORES*/
-#chamados_respondidos>div {
-    background: var(--main-e-color);
-}
 
-#chamados_respondidos h1 {
-    font-weight: 700;
-}
 
 #chamados_respondidos button {
     border: none;
@@ -247,7 +241,11 @@
 
 }
 
-#chamados_abertos {
+#chamados_respondidos > div {
+    background: var(--main-e-color);
+}
+
+#chamados_abertos > div{
     background: var(--main-e-color);
 }
 
@@ -255,8 +253,41 @@
     background: var(--main-e-color);
 }
 
-#chamados_classificados h1 {
+#chamados_classificados h1,#chamados_respondidos h1,#chamados_abertos h1{
     font-weight: 700;
+}
+
+.antigos{
+    background: #d9b04f;
+}
+
+.recentes{
+    background: #36bcba;
+
+}
+
+.mt-antigos{
+    background: #f65606;
+
+}
+
+
+
+.progress-bars{
+    gap:8px;
+}
+
+.progress-bars > div{
+    height: 10px;
+    background:var(--main-b-color);
+    width: 100%;
+}
+
+.stats > div{
+    height: 140px;
+    width: 100%;
+    color: var(--main-e-color);
+    
 }
 
 .bars-chart .bars{
