@@ -50,8 +50,21 @@
 }
 
 .content-expanded {
-    padding: 0px 120px;
+    padding: 0% 5%;
 }
+
+/* Defina pontos de quebra de mídia para ajustar o padding */
+@media screen and (max-width: 1500px) {
+    .content-expanded {
+      padding: 0 4%; /* Reduza o padding para 5% quando a tela for menor que 600px */
+    }
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .content-expanded {
+      padding: 0 2%; /* Reduza o padding para 2% quando a tela for menor que 400px */
+    }
+  }
 
 #ticketArea .content .circle {
     background: #ffaa0045;
@@ -235,9 +248,10 @@
 
 #chamados_respondidos button {
     border: none;
-    height: 38px;
+    min-height: 38px;
     background: #36bcba;
     font-weight: 500;
+
 
 }
 
@@ -271,7 +285,9 @@
 
 }
 
-
+.details{
+    color: var(--main-d-color);
+}
 
 .progress-bars{
     gap:8px;
@@ -283,7 +299,7 @@
     width: 100%;
 }
 
-.stats > div{
+#chamados_abertos .stats > div{
     height: 140px;
     width: 100%;
     color: var(--main-e-color);

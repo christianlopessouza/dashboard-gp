@@ -155,18 +155,23 @@
                                 <div>
                                     <h5>Respondidos</h5>
                                     <h1>13</h1>
-                                    <div class="progress-bars d-flex justify-content-between">
+                                    <div class="progress-bars d-flex justify-content-between mt-2">
                                         <div class="br-20"></div>
                                         <div class="br-20"></div>
                                         <div class="br-20"></div>
                                         <div class="br-20"></div>
                                     </div>
 
-                                    <div class="details">
+                                    <div class="details mt-3">
                                         <i class="fas fa-medal"></i>
                                         <span>Recorde atual: 38</span>
                                     </div>
-                                    
+
+                                    <div class="details mt-2">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>24 de janeiro de 2022</span>
+                                    </div>
+
                                 </div>
                                 <div>
 
@@ -487,8 +492,8 @@
                         </div>
 
                         <div class="others-profile profile mt-3">
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex">
+                            <div class="d-flex justify-content-between abc">
+                                <div class="d-flex ">
                                     <div class="profile-pic d-flex justify-content-center align-items-center br-6">
                                         <span>V</span>
                                     </div>
@@ -514,8 +519,8 @@
                         </div>
 
                         <div class="others-profile profile mt-3">
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex">
+                            <div class="d-flex justify-content-between abc">
+                                <div class="d-flex ">
                                     <div class="profile-pic d-flex justify-content-center align-items-center br-6">
                                         <span>M</span>
                                     </div>
@@ -553,6 +558,7 @@
         </div>
 
         <script>
+
             $('select').selectpicker();
             function toggleSidebar(sidebarId) {
                 const sidebar = document.getElementById(sidebarId);
@@ -566,6 +572,7 @@
                 const side = sidebarId.split('_')[0];
                 hideElement(side);
                 toggleButton.classList.toggle('rotate');
+                setTimeout(contentExpandedAdjustment, 310)
 
             }
 
@@ -603,11 +610,69 @@
                 });
             }
 
-            // Chamar a função quando a página carregar
-            addClassByScreenWidth();
+
+
+            function contentExpandedAdjustment(adicional = 0) {
+
+                function enable() {
+                    console.log(objeto.offsetWidth, "cima")
+
+                    document.getElementById('chamados_respondidos').classList.remove('col-md-3');
+                    document.getElementById('chamados_respondidos').classList.add('col-md-6');
+
+                    document.getElementById('chamados_classificados').classList.remove('col-md-3');
+                    document.getElementById('chamados_classificados').classList.add('col-md-6');
+
+                    document.getElementById('chamados_abertos').classList.remove('col-md-6');
+                    document.getElementById('chamados_abertos').classList.add('col-md-12');
+                    document.getElementById('chamados_abertos').classList.add('mt-3');
+                }
+
+                function disable() {
+                    console.log(objeto.offsetWidth, "baixo")
+                    document.getElementById('chamados_respondidos').classList.remove('col-md-6');
+                    document.getElementById('chamados_respondidos').classList.add('col-md-3');
+
+                    document.getElementById('chamados_classificados').classList.remove('col-md-6');
+                    document.getElementById('chamados_classificados').classList.add('col-md-3');
+
+                    document.getElementById('chamados_abertos').classList.remove('col-md-12');
+                    document.getElementById('chamados_abertos').classList.add('col-md-6');
+                    document.getElementById('chamados_abertos').classList.remove('mt-3');
+                }
+
+                var objeto = document.querySelector('.content-expanded'); // Substitua 'seuObjeto' pelo ID do seu objeto
+
+
+                if ((objeto.offsetWidth + adicional) < 1060) enable();
+                else disable();
+
+
+
+            }
+
+
 
             // Chamar a função quando a tela for redimensionada
             window.addEventListener('resize', addClassByScreenWidth);
+
+            // centro
+            window.addEventListener('resize', () => {
+                contentExpandedAdjustment(1)
+            });
+
+            $(document).ready(function () {
+                // Chamar a função quando a página carregar
+                addClassByScreenWidth();
+                contentExpandedAdjustment(1)
+
+
+            });
+
+
+
+
+
 
 
 
