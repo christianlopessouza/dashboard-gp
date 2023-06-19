@@ -148,6 +148,24 @@
 
 
             <div class="col content-expanded">
+                <div class="row banner-principal">
+
+                    <div class="col-md-12">
+                        <div class="banner" style="background-image: url('./src/super-estagios-banner.png');"></div>
+                        <h1>Super Estágios</h1>
+                        <h5>Chamados Disponíveis</h5>
+                        <div class="col-md-4">
+                            <p>A Super Estágios é reconhecida em todo Brasil pela excelência na
+                                administração de
+                                estagiários.</p>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn btn-primary" type="submit">Meus Chamados</button>
+                            <button class="btn btn-primary secs" type="submit">Geral</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="indicadores">
                     <div class="row">
                         <div class="col-md-3" id="chamados_respondidos">
@@ -213,7 +231,13 @@
                             <div class="br-20 p-4 d-flex flex-column justify-content-between h-100">
                                 <div>
                                     <h5>Abertos</h5>
-                                    <h1>22</h1>
+                                    <div class="d-flex align-items-end ">
+                                        <h1>22</h1>
+                                        <span class="numbers">
+                                            <i class="fas fa-sync-alt rotate-att"></i>
+                                            Atualizado às 18:20:56
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-end stats">
                                     <div
@@ -243,8 +267,29 @@
                     </div>
                 </div>
 
-                <br>
 
+                <div class="row mt-4 mb-4" id="navigation-ticket">
+                    <div class="col-md-6">
+                        <div class="select-area h100p ps-2 pe-4 br-6">
+                            <select>
+                                <option>Meus Chamados</option>
+                                <option>Geral</option>
+                                <option>Sem Vínculo</option>
+                                <option>Respondidos</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <div class="search-ticket">
+                            <div class="circle circle-active">
+                                <i class="fa fa-search" style="color:#EEC800"></i>
+                            </div>
+                            <input type="number" placeholder="Pesquisar Chamado" id="procura_chamado">
+
+                        </div>
+                    </div>
+                </div>
                 <div id="ticketArea">
                     <div class="ticket-main-card br-20">
                         <div class="header ms-4 me-4">

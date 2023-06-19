@@ -17,6 +17,7 @@ html {
     --main-g-color: #babed3;
     --main-h-color: #393d5a;
     --main-i-color: #24273d;
+    --main-j-color: #3e425f;
 
 
     --secondary-a-color: #fff;
@@ -317,8 +318,17 @@ body {
 
 .fs-15{
     font-size: 15px;
-
 }
+
+/*INPUT TEXT*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+*:focus {
+    outline: none;
+  }
 
 /*SCROLLBAR*/
 ::-webkit-scrollbar {
